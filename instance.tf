@@ -32,7 +32,7 @@ resource "aws_instance" "jenkins" {
       "sudo service jenkins start",
       "sudo chkconfig jenkins on",
       "sudo wget -O /tmp/terraform_0.14.0_linux_amd64.zip  https://releases.hashicorp.com/terraform/0.14.0/terraform_0.14.0_linux_amd64.zip",
-      "sudo unzip /tmp/terraform_0.14.0_linux_amd64.zip",
+      "sudo unzip /tmp/terraform_0.14.0_linux_amd64.zip -d /tmp",
       "sudo cp /tmp/terraform /usr/bin/terraform",
     ]
   }
