@@ -20,7 +20,7 @@ variable "securityGroups" {
    default = [ "sg-ae5329e6" ]
 }
 variable "instanceName" {
-   default = "linuxttest"
+   default = "jenkins"
 }
 variable "amis" {
    default = {
