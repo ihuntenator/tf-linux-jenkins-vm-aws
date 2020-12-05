@@ -39,7 +39,7 @@ terraform destroy -var-file=dev.tfvars
 
 ## Firewall
 
-Possibly need this on the jenkins host:
+If firewall set, use this.
 ```
 YOURPORT=8080
 PERM="--permanent"
@@ -52,12 +52,4 @@ firewall-cmd $SERV --add-port=$YOURPORT/tcp
 firewall-cmd $PERM --add-service=jenkins
 firewall-cmd --zone=public --add-service=http --permanent
 firewall-cmd --reload
-```
-
-## Install terraform
-
-```
-sudo wget -O /tmp/terraform_0.14.0_linux_amd64.zip  https://releases.hashicorp.com/terraform/0.14.0/terraform_0.14.0_linux_amd64.zip
-sudo unzip /tmp/terraform_0.14.0_linux_amd64.zip
-sudo cp /tmp/terraform /usr/bin/terraform
 ```
